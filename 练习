@@ -1,0 +1,26 @@
+#整数 int
+#浮点型 float（小数或分数）
+    round（）函数可将分数四舍五入到想要的小数点位数
+    eg value=round（pi，3）
+       print(value)
+    3.142
+
+#表示浮点型：3.  3.0  3.0000...
+#布尔值
+  #布尔值表示以下两个值之一：True 或 False。在下面的代码单元格中，z_one 设置为值为 True 的布尔值。
+  eg 
+      z_one = True
+      print(z_one)
+      print(type(z_one))
+    True
+    <class 'bool'>
+
+    #由于 5 < 3 是 false 语句，因此 z_four 的值为 False。
+      z_four = (5 < 3)
+      print(z_four)
+      print(type(z_four))
+    False
+    <class 'bool'>
+
+#我们可以使用 not 来切换布尔值的值。因此，not True 等同于 False，而 not False 则为 True。
+#字符串
