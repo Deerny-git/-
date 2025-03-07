@@ -1,0 +1,24 @@
+'''我们使用列表来记录参加我们派对的人以及他们到达的顺序。例如，以下列表代表一个有 7 位宾客的派对，其中 Adela 第一个到达，Ford 是最后一个到达的：
+
+party_attendees = ['Adela', 'Fleda', 'Owen', 'May', 'Mona', 'Gilbert', 'Ford']
+一位客人如果是在至少一半的派对客人之后到达的，就被认为是“时髦地迟到”。然而，他们不能是最后一个到达的客人（那太过分了）。在上面的例子中，Mona 和 Gilbert 是唯一两位时髦地迟到的客人。
+
+完成以下函数，该函数接受一个派对参与者列表以及一个人，并告诉我们这个人是否时尚地迟到。'''
+
+def fashionably_late(arrivals, name):
+   
+    index=arrivals.index(name)
+    half_length=len(arrivals)/2
+    return index >= half_length and index != len(arrivals)-1
+
+Incorrect:
+def fashionably_late(arrivals, name):
+    """Given an ordered list of arrivals to the party and a name, return whether the guest with that
+    name was fashionably late.
+    """
+   if name==arrivals[4:5]:
+        return True
+    else:
+        return False
+    
+#错误：你在代码中使用了 arrivals[4:5]，这表示从索引 4 开始到索引 5（不包括索引 5）的切片。
