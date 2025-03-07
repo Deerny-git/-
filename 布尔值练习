@@ -1,0 +1,8 @@
+#布尔变量 番茄酱、芥末 和 洋葱 表示顾客是否想要在热狗上添加特定的配料。我们希望实现一系列布尔函数，以对应关于顾客订单的一些是或否问题。
+def wants_plain_hotdog(ketchup, mustard, onion):
+    """Return whether the customer wants a plain hot dog with no toppings.
+    """
+    return not ketchup and  not mustard and  not onion
+
+   '''这个函数 wants_plain_hotdog 的作用是判断客户是否想要一个没有任何配料的普通热狗。
+    如果客户不想要任何一种配料（即 ketchup、mustard 和 onion 都为 False），则返回 True，表示客户想要一个普通的热狗。 如果客户想要任意一种配料（即 ketchup、mustard 或 onion 中有一个为 True），则返回 False，表示这不是一个“普通”的热狗。'''
