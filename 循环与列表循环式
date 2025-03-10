@@ -1,0 +1,105 @@
+multiplicands = (2, 2, 2, 3, 3, 5)
+product = 1
+for mult in multiplicands:
+    product = product * mult
+product
+
+#遍历元组
+
+s = 'steganograpHy is the practicE of conceaLing a file, message, image, or video within another fiLe, message, image, Or video.'
+msg = ''
+# print all the uppercase letters in s, one at a time
+for char in s:
+    if char.isupper():
+#char.isupper() 是一个字符串方法，用于检查当前字符 char 是否是大写字母。
+        print(char, end='')  
+#参数 end='' 的作用是让 print 函数在输出时不换行，默认情况下 print 会在每次输出后添加一个换行符 \n，而这里我们希望所有大写字母连在一起输出。
+
+>>>HELLO
+
+for i in range(5):
+#range(5) 是一个 Python 内置函数，生成从 0 到 4 的整数序列（不包括 5）。
+换句话说，range(5) 会生成 [0, 1, 2, 3, 4]
+    print("Doing important work. i =", i)
+
+>>>Doing important work. i = 0
+Doing important work. i = 1
+Doing important work. i = 2
+Doing important work. i = 3
+Doing important work. i = 4
+
+
+loud_short_planets = [planet.upper() + '!' for planet in planets if len(planet) < 6]
+loud_short_planets
+
+>>>['VENUS!', 'EARTH!', 'MARS!']
+
+'''运行顺序：遍历：依次从 planets 中取出每个元素。
+过滤：检查元素是否满足条件 len(planet) < 6。
+转换：对满足条件的元素执行 planet.upper() + '!'。
+收集：将转换后的结果添加到新列表中。'''
+
+#经典
+def count_negatives(nums):
+    """Return the number of negative numbers in the given list.
+    
+    >>> count_negatives([5, -1, -2, 0, 3])
+    2
+返回一个与 L 长度相同的列表，其中索引 i 处的值如果 L[i] 大于 thresh 则为 True，否则为 False。 >>> elementwise_greater_than([1, 2, 3, 4], 2) [False, False, True, True]
+    """
+    n_negative = 0
+    for num in nums:
+        if num < 0:
+            n_negative = n_negative + 1
+    return n_negative
+
+#例题
+def elementwise_greater_than(L, thresh):
+    """Return a list with the same length as L, where the value at index i is 
+    True if L[i] is greater than thresh, and False otherwise.
+    
+    >>> elementwise_greater_than([1, 2, 3, 4], 2)
+    [False, False, True, True]
+    """
+    def elementwise_greater_than(L, thresh):
+    i = 0
+    for num in L[i]:
+        if num > thresh:
+            num == True
+            return num
+        else:
+            num == False
+            return num
+        i = i + 1
+        print(num)
+        
+'''改错：
+1.有循环for in，不需要再加i=i+1
+2.L[i]是一个整数，整数不支持迭代，应该遍历L才对
+3.“==”是比较运算符，而非赋值运算符，不会对num进行任何修改
+4.return num 会使函数在第一次迭代的时候就退出，无法完成对整个列表的处理
+
+  '''
+#正确
+def elementwise_greater_than(L, thresh):
+    """Return a list with the same length as L, where the value at index i is 
+    True if L[i] is greater than thresh, and False otherwise.
+    """
+    result = [ ]  # 创建一个空列表用于存储结果
+    for num in L:  # 遍历列表 L 中的每个元素
+        if num > thresh:  # 检查当前元素是否大于阈值
+            result.append(True)  # 如果是，添加 True 到结果列表
+       #result.append(True)是括号，incorret result.append=True
+	 else:
+            result.append(False)  # 否则，添加 False 到结果列表
+    return result  # 返回结果列表
+
+
+#range()函数用处
+
+'''需要执行固定次数的循环。
+需要按索引访问列表或其他序列中的元素。
+需要生成特定范围内的数字序列。
+需要控制步长或逆序遍历。'''
+
+
